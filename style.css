@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex {
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    max-width: 1487px;
+    margin: 0 auto;
+}
+
+.main-sec1 {
+    height: 598px;
+    background-color: wheat;
+
+    .illustration {
+        padding-left: 109px;
+        padding-bottom: 84px;
+    }
+
+    .box1 {
+        img {
+            animation: imgTranslate 5s infinite;
+        }
+
+        .box1-child {
+            padding-left: 190px;
+
+            h1 {
+                font-family: "Mulish", sans-serif;
+                font-weight: 700;
+                font-size: 48px;
+                line-height: 56px;
+                color: #000000;
+                animation: zagolovokChanges 1s infinite;
+                padding-top: 10px;
+            }
+
+            .infop {
+                font-family: "Mulish", sans-serif;
+                font-weight: 300;
+                font-size: 21px;
+                line-height: 32px;
+                color: #7D7987;
+                padding-top: 25px;
+            }
+
+            .consultbtn {
+                width: 200px;
+                height: 60px;
+                border-radius: 55px;
+                background-color: #458FF6;
+                border: none;
+                margin-top: 45px;
+
+                .btnp {
+                    font-family: "Mulish", sans-serif;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 60px;
+                    color: #FFFFFF;
+                }
+            }
+
+            .consultbtn:hover {
+                cursor: pointer;
+                animation: buttonChanges 1s infinite;
+
+                .btnp {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@keyframes imgTranslate {
+    0% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translateX(75px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(150px);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateX(75px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes buttonChanges {
+    0% {
+        color: #FFFFFF;
+        background-color: #458FF6;
+        scale: 1;
+    }
+
+    50% {
+        color: #000000;
+        background-color: aqua;
+        scale: 1.1;
+    }
+
+    100% {
+        color: #FFFFFF;
+        background-color: #458FF6;
+        scale: 1;
+    }
+}
+
+@keyframes zagolovokChanges {
+    0% {
+        transform: translateX(-25px);
+        scale: 1;
+        color: #000000;
+    }
+
+    50% {
+        transform: translateX(25px);
+        scale: 1.1;
+        color: white;
+    }
+
+    100% {
+        transform: translateX(-25px);
+        scale: 1;
+        color: #000000;
+    }
+}
+
+.header-wrap {
+    height: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .items {
+        display: flex;
+        gap: 40px;
+
+        .itemglav {
+            font-family: "Mulish", sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 100%;
+            color: #1F1534;
+            padding-left: 512px;
+            animation: itemglavChange 1s infinite;
+
+        }
+
+        .item {
+            font-family: "Mulish", sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 100%;
+            color: #1F1534;
+            animation: itemChange 1s infinite;
+        }
+    }
+}
+
+@keyframes itemglavChange {
+    0% {
+        font-weight: 400;
+    }
+
+    50% {
+        font-weight: 700;
+    }
+
+    100% {
+        font-weight: 400;
+    }
+}
+
+@keyframes itemChange {
+    0% {
+        font-weight: 200;
+    }
+
+    50% {
+        font-weight: 400;
+    }
+
+    100% {
+        font-weight: 200;
+    }
+}
